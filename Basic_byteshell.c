@@ -321,14 +321,14 @@ int Execute(char **args){
 ///////// FUNCTION TO RUN THE LOOP OF THE SHELL
 void Shell_Loop(){
     char *Line;
-    char **args;
+    char **arguments;
     int status;
     do{
         printf("> ");
         Line=Read_Line();
         args=Split_Line(Line);
-        Add_to_Hist(args);
-        status=Execute(args);
+        Add_to_Hist(arguments);
+        status=Execute(arguments);
     }while(status>0);
 }
 
