@@ -334,8 +334,8 @@ void Shell_Loop(){
 
 ///////// MAIN FUNCTION
 int main(int c,char **argv){
-    Hist=(Stack *)malloc(sizeof(Stack));
+    cmd_history=(Stack *)malloc(sizeof(Stack));
     Shell_Loop();
-    EmptyStack(Hist);
+    EmptyStack(cmd_history);
     return EXIT_SUCCESS;
 }
